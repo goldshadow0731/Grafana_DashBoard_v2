@@ -15,7 +15,7 @@ class BaseTable():
         "mysql_charset": "utf8mb4"
     }
     Count_Log = Column(Integer, nullable=False, primary_key=True)
-    Time_Stamp = Column(DateTime(timezone=True), nullable=False,
+    Time_Stamp = Column(DateTime(timezone=False), nullable=False,
                         default=datetime.datetime.utcnow)
 
 
