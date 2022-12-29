@@ -84,14 +84,14 @@ def on_message(client, userdata, msg):
         elif msg.topic == "air_condiction/A":
             payload = json.loads(data)
             session.add(AirCondictionA(
-                Temp=payload["temp"],
-                Humi=payload["humi"]
+                Temp=round(payload["temp"], 2),
+                Humi=round(payload["humi"], 2)
             ))
         elif msg.topic == "air_condiction/B":
             payload = json.loads(data)
             session.add(AirCondictionB(
-                Temp=payload["temp"],
-                Humi=payload["humi"]
+                Temp=round(payload["temp"], 2),
+                Humi=round(payload["humi"], 2)
             ))
         elif msg.topic == "UPS/A/Monitor":
             payload = json.loads(data)
