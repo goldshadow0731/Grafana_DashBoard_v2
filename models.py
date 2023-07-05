@@ -17,7 +17,7 @@ class BaseTable():
     }
     Count_Log = Column(Integer, nullable=False, primary_key=True)
     Time_Stamp = Column(DateTime(timezone=False), nullable=False,
-                        default=datetime.datetime.now)
+                        default=datetime.datetime.utcnow)
 
 
 class DL303TC(BaseTable, Base):  # 溫度
